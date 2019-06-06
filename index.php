@@ -14,6 +14,10 @@
     <title>Document</title>
 </head>
 <body>
-    <?php echo $form->fields ?>
+   <form>
+       <?php foreach ($form->fields as $field) : ?>
+            <p><input type="<?php $field->getType() ?>"></p>
+       <?php endforeach; ?>
+   </form>
 </body>
 </html>
